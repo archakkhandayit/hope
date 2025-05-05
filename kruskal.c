@@ -64,3 +64,18 @@ int main() {
 
     return 0;
 }
+
+
+
+
+Enter number of vertices and edges: 6 9
+Enter each edge (u v weight):
+0 1 4
+0 2 4
+0 5 6
+1 2 2
+2 3 3
+2 4 4
+2 5 2
+3 4 3
+4 5 3
