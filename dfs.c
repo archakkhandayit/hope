@@ -49,3 +49,18 @@ int main(){
 
     return 0;
 }
+
+
+
+
+
+Enter number of nodes (max 20): 7
+Enter adjacency matrix (7x7):
+0 1 1 1 0 0 0
+1 0 0 1 0 0 0
+1 0 0 1 1 0 0
+1 1 1 0 1 0 0
+0 0 1 1 0 1 1
+0 0 0 0 1 0 0
+0 0 0 0 1 0 0
+Enter starting node (0 to 6): 0
