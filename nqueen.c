@@ -39,7 +39,6 @@ void solve(int row) {
         for (int i = 0; i < n; i++) {
             strcpy(solution[i], board[i]);
         }
-        printSolution();
         return;
     }
 
@@ -69,5 +68,6 @@ int main() {
     }
 
     solve(0);
+    printSolution();
     return 0;
 }
