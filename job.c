@@ -4,21 +4,18 @@
 
 #define MAX 100
 
-// Job structure
 typedef struct Job {
     char id[10];
     int deadline;
     int profit;
 } Job;
 
-// Comparator for sorting jobs by profit in descending order
 int compare(const void *a, const void *b) {
     Job *job1 = (Job *)a;
     Job *job2 = (Job *)b;
     return job2->profit - job1->profit;
 }
 
-// Find the maximum deadline among all jobs
 int findMaxDeadline(Job jobs[], int n) {
     int max = jobs[0].deadline;
     for (int i = 1; i < n; i++) {
@@ -29,7 +26,6 @@ int findMaxDeadline(Job jobs[], int n) {
 }
 
 void jobScheduling(Job jobs[], int n) {
-    // Sort jobs by profit (descending)
     qsort(jobs, n, sizeof(Job), compare);
 
     int maxDeadline = findMaxDeadline(jobs, n);
@@ -40,18 +36,16 @@ void jobScheduling(Job jobs[], int n) {
     int jobCount = 0;
 
     for (int i = 0; i < n; i++) {
-        // Find a free slot for this job (latest possible before deadline)
         for (int j = jobs[i].deadline - 1; j >= 0; j--) {
             if (slot[j] == -1) {
-                slot[j] = i; // Assign job to this slot
+                slot[j] = i;
                 totalProfit += jobs[i].profit;
                 jobCount++;
                 break;
             }
         }
     }
-
-    // Output scheduled jobs
+    
     printf("Scheduled Jobs:\n");
     for (int i = 0; i < maxDeadline; i++) {
         if (slot[i] != -1) {
@@ -81,3 +75,16 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+Enter number of jobs: 5
+Enter Job ID, Deadline and Profit for each job:
+Job 1: A 2 100
+Job 2: B 1 19
+Job 3: C 2 27
+Job 4: D 1 25
+Job 5: E 3 15
