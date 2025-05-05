@@ -77,3 +77,17 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+Enter number of vertices: 5
+Enter the adjacency matrix (0 if no edge):
+0 10 3 0 0
+0 0 1 4 0
+0 4 0 8 2
+0 0 0 0 7
+0 0 0 0 0
+Enter the source vertex (0 to 4): 0
